@@ -262,14 +262,14 @@
       #content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        background-color: antiquewhite;
+        grid-template-rows: repeat(2, 1fr);
       }
 
       .item {
-        background-color: beige;
         width: 100%;
         height: 100%;
+        padding-bottom: 14px;
+        padding-right: 10px;
       }
 
       .card {
@@ -277,27 +277,119 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-family: "Nanum Gothic";
+      }
+
+      .poster {
+        width: 85%;
+        border-radius: 10px;
       }
 
       .Ctext {
-        border: 1px solid red;
+        width: 85%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 10px;
       }
 
       .Ctext img {
-        width: 40px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
+        margin-right: 7px;
       }
 
-      #col1 {
-        border: 1px solid blue;
+      .col1 {
+        height: 40px;
         display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 18px;
+        padding-left: 10px;
+        padding-top: 5px;
+      }
+
+      .col2 {
+        height: 40px;
+        display: flex;
+        flex-wrap: nowrap;
+        font-size: 14px;
+        justify-content: space-around;
+      }
+
+      .col3 {
+        height: 30px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+      }
+
+      .btn {
+        width: 67px;
+        height: 35px;
+        background-color: #503396;
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 14px;
+        border: none;
+      }
+
+      .plus {
+        width: 110px;
+        height: 35px;
+        background-color: #503396;
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 14px;
+        border: none;
+      }
+
+      .heart {
+        display: flex;
+        background-color: #fff;
+        border: 1px solid #777;
+        align-items: center;
+
+        color: #777;
+        font-size: 12px;
+      }
+
+      .heart span {
+        font-size: 20px;
+        margin-right: 4px;
+      }
+
+      .dolby {
+        background-image: url("/hkweb/mov_list_db_btn.png");
+        background-repeat: no-repeat;
+        background-position: 9px 6px;
+      }
+
+      .add {
+        display: flex;
+        background-color: #d3d3d336;
+        border: 1px solid #bdbcbc;
+        justify-self: center;
         justify-content: center;
         align-items: center;
-        font-size: 21px;
+        width: 75%;
+        height: 40px;
+        margin-top: 20px;
+      }
+
+      .footer {
+        display: flex;
+        background-color: #e3e0e07e;
+        justify-self: center;
+        width: 100%;
+        height: 150px;
+        margin-top: 50px;
       }
     </style>
   </head>
@@ -408,37 +500,202 @@
         <div id="content">
           <div class="item">
             <div class="card">
-              <img src="/hkweb/movie1.png" alt="포스터" />
+              <img class="poster" src="/hkweb/movie1.png" alt="포스터" />
               <div class="Ctext">
-                <div id="col1">
+                <div class="col1">
                   <img src="/hkweb/ALL_46x46.png" alt="all" />
                   <p>말할 수 없는 비밀</p>
                 </div>
-                <div>
+                <div class="col2">
                   <p>예매율 30.3%</p>
                   <p>개봉일 2025.01.28</p>
                 </div>
-                <div>
-                  <button>g</button>
-                  <button>d</button>
-                  <button>d</button>
+                <div class="col3">
+                  <button class="btn heart">
+                    <span class="material-symbols-outlined"> favorite </span>
+                    674
+                  </button>
+                  <button class="btn">예매</button>
+                  <button class="btn dolby"></button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="item">2</div>
-          <div class="item">3</div>
-          <div class="item">4</div>
-          <div class="item">5</div>
-          <div class="item">6</div>
-          <div class="item">7</div>
-          <div class="item">8</div>
-          <div class="item">A</div>
-          <div class="item">A</div>
-          <div class="item">A</div>
+          <div class="item">
+            <div class="card">
+              <img class="poster" src="/hkweb/movie2.jpg" alt="포스터" />
+              <div class="Ctext">
+                <div class="col1">
+                  <img src="/hkweb/15_46x46.png" alt="all" />
+                  <p>검은 수녀들</p>
+                </div>
+                <div class="col2">
+                  <p>예매율 13.4%</p>
+                  <p>개봉일 2025.01.24</p>
+                </div>
+                <div class="col3">
+                  <button class="btn heart">
+                    <span class="material-symbols-outlined"> favorite </span>
+                    333
+                  </button>
+                  <button class="btn">예매</button>
+                  <button class="btn dolby"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item">
+              <div class="card">
+                <img class="poster" src="/hkweb/movie3.jpg" alt="포스터" />
+                <div class="Ctext">
+                  <div class="col1">
+                    <img src="/hkweb/15_46x46.png" alt="all" />
+                    <p>히트맨2</p>
+                  </div>
+                  <div class="col2">
+                    <p>예매율 13.4%</p>
+                    <p>개봉일 2025.01.24</p>
+                  </div>
+                  <div class="col3">
+                    <button class="btn heart">
+                      <span class="material-symbols-outlined"> favorite </span>
+                      333
+                    </button>
+                    <button class="plus">예매</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item">
+              <div class="card">
+                <img class="poster" src="/hkweb/movie5.jpg" alt="포스터" />
+                <div class="Ctext">
+                  <div class="col1">
+                    <img src="/hkweb/15_46x46.png" alt="all" />
+                    <p>보고타</p>
+                  </div>
+                  <div class="col2">
+                    <p>예매율 13.4%</p>
+                    <p>개봉일 2025.01.24</p>
+                  </div>
+                  <div class="col3">
+                    <button class="btn heart">
+                      <span class="material-symbols-outlined"> favorite </span>
+                      333
+                    </button>
+                    <button class="plus">예매</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item">
+              <div class="card">
+                <img class="poster" src="/hkweb/movie4.jpg" alt="포스터" />
+                <div class="Ctext">
+                  <div class="col1">
+                    <img src="/hkweb/15_46x46.png" alt="all" />
+                    <p>하얼빈</p>
+                  </div>
+                  <div class="col2">
+                    <p>예매율 13.4%</p>
+                    <p>개봉일 2025.01.24</p>
+                  </div>
+                  <div class="col3">
+                    <button class="btn heart">
+                      <span class="material-symbols-outlined"> favorite </span>
+                      333
+                    </button>
+                    <button class="btn">예매</button>
+                    <button class="btn dolby"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item">
+              <div class="card">
+                <img class="poster" src="/hkweb/movie6.jpg" alt="포스터" />
+                <div class="Ctext">
+                  <div class="col1">
+                    <img src="/hkweb/19_46x46.png" alt="all" />
+                    <p>동화지만 청불입니다</p>
+                  </div>
+                  <div class="col2">
+                    <p>예매율 13.4%</p>
+                    <p>개봉일 2025.01.24</p>
+                  </div>
+                  <div class="col3">
+                    <button class="btn heart">
+                      <span class="material-symbols-outlined"> favorite </span>
+                      333
+                    </button>
+                    <button class="plus">예매</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item">
+              <div class="card">
+                <img class="poster" src="/hkweb/movie7.jpg" alt="포스터" />
+                <div class="Ctext">
+                  <div class="col1">
+                    <img src="/hkweb/15_46x46.png" alt="all" />
+                    <p>폭락</p>
+                  </div>
+                  <div class="col2">
+                    <p>예매율 13.4%</p>
+                    <p>개봉일 2025.01.24</p>
+                  </div>
+                  <div class="col3">
+                    <button class="btn heart">
+                      <span class="material-symbols-outlined"> favorite </span>
+                      333
+                    </button>
+                    <button class="plus">예매</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item">
+              <div class="card">
+                <img class="poster" src="/hkweb/movie8.jpg" alt="포스터" />
+                <div class="Ctext">
+                  <div class="col1">
+                    <img src="/hkweb/ALL_46x46.png" alt="all" />
+                    <p>러브레터</p>
+                  </div>
+                  <div class="col2">
+                    <p>예매율 13.4%</p>
+                    <p>개봉일 2025.01.24</p>
+                  </div>
+                  <div class="col3">
+                    <button class="btn heart">
+                      <span class="material-symbols-outlined"> favorite </span>
+                      333
+                    </button>
+                    <button class="plus">예매</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="footer"></div>
+    <div class="add">더보기</div>
+    <div class="footer">
+      <div class="fottop"></div>
+      <div class="fotbot"></div>
+    </div>
   </body>
 </html>
