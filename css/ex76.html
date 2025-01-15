@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmet 문법</title>
+  </head>
+  <body>
+    <!-- 기본 요소  -->
+    <div></div>
+    <p></p>
+    <!-- 자식요소(>) -->
+    <div>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <!-- 형제요소 (+) -->
+    <div></div>
+    <p></p>
+    <span></span>
+    <!-- 상위요소로 이동 (^) -->
+    <!-- div>p>span^h1 -->
+    <div>
+      <p><span></span></p>
+      <h1></h1>
+    </div>
+    <!-- 여러개 (*) -->
+    <!-- ul * 3 -->
+    <ul></ul>
+    <ul></ul>
+    <ul></ul>
+    <!-- ID와 클래스 -->
+    <!-- div#header -->
+    <div id="header"></div>
+    <div class="header"></div>
+    <div id="header" class="header1 header2"></div>
+    <!-- 속성추가([]) -->
+    <!-- a[href='http://server.com'] -->
+    <a href="http://server.com"></a>
+    <img src="bg.jpg" alt="image" />
+
+    <!-- 넘버링($) -->
+    <!-- ul>li.items$*5{hello$} -->
+    <ul>
+      <li class="item1">hello1</li>
+      <li class="item2">hello2</li>
+      <li class="item3">hello3</li>
+      <li class="item4">hello4</li>
+      <li class="item5">hello5</li>
+    </ul>
+
+    <!-- 텍스트 내용 ({}) -->
+    <!-- div{item$}*3 -->
+    <div>item1</div>
+    <div>item2</div>
+    <div>item3</div>
+
+    <!-- 그룹화 (()) -->
+    <!-- div>(header>ul*li*2)*footer>p -->
+    <div>
+      <header>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </header>
+      <footer>
+        <p></p>
+      </footer>
+    </div>
+
+    <!--  실제 사용 예시 -->
+    <!-- nav>ul.menu>li.menu-item*4>a[href=#](menu $) -->
+    <nav>
+      <ul class="menu">
+        <li class="menu-item"><a href="#">menu 1</a></li>
+        <li class="menu-item"><a href="#">menu 2</a></li>
+        <li class="menu-item"><a href="#">menu 3</a></li>
+        <li class="menu-item"><a href="#">menu 4</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
